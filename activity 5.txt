@@ -1,0 +1,31 @@
+#include <stdio.h>
+int main(){
+    //Define patient IDs and their respective locations
+    int patientIDs[] = {101, 102, 103, 104, 105, 106, 107, 108, 109, 110,
+                        111, 112, 113, 114, 115, 116, 117, 118, 119, 120,
+                        121, 122, 123, 124, 125, 126, 127, 128, 129, 130};
+    char *patientLocations[] = {"Room 1", "Garden", "Therapy Room", "Cafeteria", "Room 2", "Library",
+                                "Dining Hall", "Reception Area", "Room 3", "Counseling Room", "Medication Room",
+                                "Rehabilitation Room", "Room 4", "Exercise Room", "Playground", "Playground", 
+                                "MISSING! (Not in Hospital)", "Pharmacy", "Washroom", "Canteen", "Cafeteria", 
+                                "Seminar Hall", "Seminar Hall", "Art Room", "Kitchen", "Gym", "Lobby", "Room 6", 
+                                "Room 7", "Room 8"};
+    int totalPatients = 30;
+    int enteredID;
+    int isFound = 0;
+    printf("===== HOSPITAL TRACKING SYSTEM =====\n");
+    printf("\nEnter the patient's ID to check their location: ");
+    scanf("%d", &enteredID);
+    
+    for(int i = 0; i < totalPatients; i++){
+        if(patientIDs[i] == enteredID){
+            printf("Patient ID: %d\n", patientIDs[i]);
+            printf("Current Location: %s\n", patientLocations[i]);
+            isFound = 1;
+            break;
+        }
+    }if(!isFound){
+        printf("Warning: No record found for Patient ID %d.\n", enteredID);
+    }
+  return 0;
+}
