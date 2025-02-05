@@ -1,3 +1,5 @@
+//Code for patient tracking system
+
 #include <stdio.h>
 int main(){
     //Define patient IDs and their respective locations
