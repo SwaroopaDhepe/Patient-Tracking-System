@@ -3,7 +3,9 @@ This is a simple C program that allows users to track the location of patients u
 
 Features: 
 Stores patient IDs and locations using arrays.
+
 Allows user input to search for a specific patient.
+
 Displays the patient's location if found.
 Provides an alert message if the patient ID is not in the system.
 
